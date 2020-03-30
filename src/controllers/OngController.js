@@ -9,8 +9,6 @@ module.exports = {
   },
 
   async create(request, response) {
-//  const queryParams = request.query;    console.log(queryParams);
-//  const routeParams = request.params;   console.log(routeParams);
     const {name, email, whatsapp, city, uf} = request.body;
     const id = crypto.randomBytes(4).toString('HEX');
     await connection('ongs').insert({
